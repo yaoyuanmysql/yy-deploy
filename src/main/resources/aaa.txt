@@ -1,0 +1,17 @@
+insert into permission (id, name, interface_url, route_url, description, menu_id, is_deleted, create_time, update_time,
+                        parentId, type)
+values
+#        ('09-3-1-1','通道配置','/cameraWorkbench/queryChannelList','business/application/security/workbench/passageway-information','通道配置','09-3-1',0,'2020-08-14 16:18:00','2020-08-14 16:18:00','09-3-1',1),
+#        ('09-3-1-1-1','新增','/cameraWorkbench/queryChannelList','business/application/security/workbench/passageway-information','通道配置','09-3-1',0,'2020-08-14 16:18:00','2020-08-14 16:18:00','09-3-1',1),
+('09-3-1-1',	    '通道配置',	    'cameraWorkbench/queryChannelList',	null,	'通道配置',	            '09-3-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00', 	'09-3-1',	1),
+('09-3-1-1-1',	'新增',	        'cameraWorkbench/insertChannel',	null,   '新增',	                '09-3-1-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00', 	'09-3-1-1',1),
+('09-3-1-1-2',	'删除',	        'cameraWorkbench/deleteChannel',	null,	'删除',	                '09-3-1-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00',  '09-3-1-1',	1),
+('09-3-1-1-3',	'通道详情',       null                           ,   null,   '通道详情',	            '09-3-1-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00',  '09-3-1-1',1),
+('09-3-1-1-4',	'编辑',	        'cameraWorkbench/updateChannel',	null,	'编辑',	                '09-3-1-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00',  '09-3-1-1',1),
+('09-3-1-2',	    '基础配置',     	'business/application/security/workbench/basics',null,	'基础配置',	'09-3-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00',  '09-3-1',1),
+('09-3-1-3',	    '播放',	        'instruct/instructDistribute',		null,   '播放',	                '09-3-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00',  '09-3-1',1),
+('09-3-1-4',	    '关闭',	        'instruct/instructDistribute',		null,   '关闭',	                '09-3-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00',  '09-3-1',1),
+('09-3-1-5',	    '云台控制',	    'instruct/instructDistribute',		null,   '云台控制',	            '09-3-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00',  '09-3-1',1),
+('09-3-1-6',	    '保存',	        'instruct/instructDistribute',		null,   '保存',	                '09-3-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00',  '09-3-1',1),
+('09-3-1-7',	    '转到预置位',    'instruct/instructDistribute	',  	null,   '转到预置位',	            '09-3-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00',  '09-3-1',1),
+('09-3-1-8',  	'删除',	        'instruct/instructDistribute',		null,   '删除',	                '09-3-1',	0,	'2020-08-14 16:18:00',	'2020-08-14 16:18:00',  '09-3-1',1)

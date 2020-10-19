@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yy.deploy.docker.dao.DockerRepositoryDao">
+
+
+    <!--新增仓库信息-->
+    <insert id="addRepository" parameterType="com.yy.deploy.docker.bean.DockerRepositoryInfo">
+      insert into repository_info
+      (repository_name, repository_ip, repository_port, repository_login_name, repository_login_password)
+      values (
+              #{repositoryName},
+              #{repositoryIp},
+              #{repositoryPort},
+              #{repositoryLoginName},
+              #{repositoryLoginPassword}
+              )
+    </insert>
+
+    <!--查询所有的仓库信息-->
+    <select id="getRepositoryList" resultType="com.yy.deploy.docker.bean.DockerRepositoryInfo">
+        select
+               id,
+               repository_name as repositoryName,
+               repository_ip as repositoryIp,
+               repository_port repositoryPort,
+               repository_login_name as repositoryLoginName,
+               repository_login_password as repositoryLoginPassword
+        from repository_info
+
+    </select>
+    <select id="getRepositoryByName" resultType="com.yy.deploy.docker.bean.DockerRepositoryInfo">
+        select
+            id,
+            repository_name as repositoryName,
+            repository_ip as repositoryIp,
+            repository_port repositoryPort,
+            repository_login_name as repositoryLoginName,
+            repository_login_password as repositoryLoginPassword
+        from repository_info
+        where repository_name = #{repositoryName}
+    </select>
+</mapper>
+
+
